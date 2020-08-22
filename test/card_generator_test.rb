@@ -9,4 +9,11 @@ class CardGeneratorTest < Minitest::Test
 
     assert_instance_of CardGenerator, cards
   end
+
+  def test_it_returns_filename
+    filename = "cards.txt"
+    cards = CardGenerator.new(filename)
+
+    assert_equal "cards.txt", cards.filename
+  end
 end
